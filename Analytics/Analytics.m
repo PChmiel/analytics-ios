@@ -26,10 +26,8 @@ static NSInteger const AnalyticsSettingsUpdateInterval = 3600;
 
 @synthesize cachedSettings = _cachedSettings;
 
-- (id)initWithSecret:(NSString *)secret {
-    NSParameterAssert(secret.length);
+- (id)initWithNothing {
     if (self = [self init]) {
-        _secret = secret;
         _serialQueue = dispatch_queue_create_specific("io.segment.analytics", DISPATCH_QUEUE_SERIAL);
         _messageQueue = [[NSMutableArray alloc] init];
         _providers = [[NSMutableDictionary alloc] init];
@@ -37,13 +35,12 @@ static NSInteger const AnalyticsSettingsUpdateInterval = 3600;
                 ^(NSString *identifier, Class providerClass, BOOL *stop) {
              ((NSMutableDictionary *)_providers)[identifier] = [[providerClass alloc] initWithAnalytics:self];
         }];
+        
         // Update settings on each provider immediately
-        [self refreshSettings];
-        _settingsTimer = [NSTimer scheduledTimerWithTimeInterval:AnalyticsSettingsUpdateInterval
-                                                          target:self
-                                                        selector:@selector(refreshSettings)
-                                                        userInfo:nil
-                                                         repeats:YES];
+        dispatch_specific_async(_serialQueue, ^{
+            NSDictionary *settings = @{@"Mixpanel" : @{@"token" : @"89f86c4aa2ce5b74cb47eb5ec95ad1f9"}};
+            [self updateProvidersWithSettings:settings];
+        });
         
         // Attach to application state change hooks
         for (NSString *name in @[UIApplicationDidEnterBackgroundNotification,
@@ -210,9 +207,10 @@ static NSInteger const AnalyticsSettingsUpdateInterval = 3600;
 }
 
 - (void)setCachedSettings:(NSDictionary *)settings {
-    _cachedSettings = settings;
-    [_cachedSettings ?: @{} writeToURL:SETTING_CACHE_URL atomically:YES];
-    [self updateProvidersWithSettings:settings];
+    //_cachedSettings = settings;
+    //[_cachedSettings ?: @{} writeToURL:SETTING_CACHE_URL atomically:YES];
+    
+    
 }
 
 - (void)updateProvidersWithSettings:(NSDictionary *)settings {
@@ -224,6 +222,7 @@ static NSInteger const AnalyticsSettingsUpdateInterval = 3600;
 }
 
 - (void)refreshSettings {
+    /*
     if (!_settingsRequest) {
         NSString *urlString = [NSString stringWithFormat:@"http://api.segment.io/project/%@/settings", self.secret];
         NSURL *url = [NSURL URLWithString:urlString];
@@ -242,6 +241,8 @@ static NSInteger const AnalyticsSettingsUpdateInterval = 3600;
             });
         }];
     }
+    */
+
 }
 
 #pragma mark - Class Methods
@@ -263,12 +264,11 @@ static NSMutableDictionary *RegisteredProviders = nil;
 
 static Analytics *SharedInstance = nil;
 
-+ (void)initializeWithSecret:(NSString *)secret {
-    NSParameterAssert(secret.length > 0);
++ (void)initializeWithNothing {
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        SharedInstance = [[self alloc] initWithSecret:secret];
+        SharedInstance = [[self alloc] initWithNothing];
     });
 }
 

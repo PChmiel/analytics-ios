@@ -38,7 +38,7 @@
 }
 
 */
-+ (void)initializeWithSecret:(NSString *)secret;
++ (void)initializeWithNothing;
 
 /*!
  @method
@@ -191,7 +191,7 @@
  @abstract
  Used internally to create an Analytics instance.
 */
-- (id)initWithSecret:(NSString *)secret;
+- (id)initWithNothing;
 + (NSString *)version;
 
 // Must be called before initializing Analytics in order to successfully register provider
