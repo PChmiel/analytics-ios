@@ -1,9 +1,19 @@
-analytics-ios
+Samba analytics-ios
 =================
+This is a modified version of the segment.io analytics-ios SDK. The dependence on the segment.io dashboard has been removed. A segment.io API secret is not required to use this SDK and the segment.io Provider has been removed. 
+Settings for each Provider is passed in the at initialization as an NSDictionary. The values needed to initialize each Provider can be found by digging into the Provider classes and examples can bee seen in the settings.json file included in Project.
 
-analytics-ios is an iOS client for [Segment.io](https://segment.io)
+Example initializing a Mixpanel Provider below.
+    - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+        ...
+        NSDictionary *settings = @{@"Mixpanel" : @{@"token" : @"89f86c4aa2ce5b74cb47eb5ec95ad1f9"}};
+        [Analytics debug:YES];
+        [Analytics initializeWithSettings:settings];
+        ...
+    }
 
-Special thanks to [Tony Xiao](https://github.com/tonyxiao), [Lee Hasiuk](https://github.com/lhasiuk) and [Cristian Bica](https://github.com/cristianbica) for their contributions to the library!
+
+Shout out to [Segment.io](https://segment.io)
 
 ## Documentation
 
@@ -46,6 +56,4 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/segmentio/analytics-ios/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
