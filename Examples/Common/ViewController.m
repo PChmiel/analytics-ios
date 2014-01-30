@@ -10,7 +10,6 @@
 #import "ViewController.h"
 #import "Reachability.h"
 #import "Analytics/TSTapstream.h"
-#import "Analytics/Private/SegmentioProvider.h"
 #import <Analytics/Flurry.h>
 
 @implementation ViewController

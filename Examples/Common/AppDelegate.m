@@ -12,7 +12,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [Analytics debug:YES];
-    [Analytics initializeWithSecret:@"k5l6rrye0hsv566zwuk7"];
+    NSDictionary *settings = @{@"Mixpanel" : @{@"token" : @"89f86c4aa2ce5b74cb47eb5ec95ad1f9"}};
+    [Analytics initializeWithSettings:settings];
     //[[Analytics sharedAnalytics] identify:nil];
     [[Analytics sharedAnalytics] track:@"Anonymous Event"];
     [[Analytics sharedAnalytics] identify:@"Test User"];
