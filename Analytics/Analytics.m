@@ -13,7 +13,6 @@ static NSInteger const AnalyticsSettingsUpdateInterval = 3600;
 @interface Analytics ()
 
 @property (nonatomic, strong) NSDictionary *providers;
-@property (nonatomic, strong) NSDictionary *cachedSettings;
 
 @end
 
@@ -24,9 +23,7 @@ static NSInteger const AnalyticsSettingsUpdateInterval = 3600;
     NSTimer *_settingsTimer;
 }
 
-@synthesize cachedSettings = _cachedSettings;
-
-- (id)initWithNothing {
+- (id)initWithSettings:(NSDictionary *)settings {
     if (self = [self init]) {
         _serialQueue = dispatch_queue_create_specific("io.segment.analytics", DISPATCH_QUEUE_SERIAL);
         _messageQueue = [[NSMutableArray alloc] init];
@@ -38,7 +35,6 @@ static NSInteger const AnalyticsSettingsUpdateInterval = 3600;
         
         // Update settings on each provider immediately
         dispatch_specific_async(_serialQueue, ^{
-            NSDictionary *settings = @{@"Mixpanel" : @{@"token" : @"89f86c4aa2ce5b74cb47eb5ec95ad1f9"}};
             [self updateProvidersWithSettings:settings];
         });
         
@@ -102,15 +98,9 @@ static NSInteger const AnalyticsSettingsUpdateInterval = 3600;
 
 - (void)callProvidersWithSelector:(SEL)selector arguments:(NSArray *)arguments options:(NSDictionary *)options  {
     dispatch_specific_async(_serialQueue, ^{
-        // No cached settings, queue the API call
-        if (!self.cachedSettings.count) {
-            [self queueSelector:selector arguments:arguments options:options];
-        }
-        // Settings cached, flush message queue & new API call
-        else {
-            [self flushMessageQueue];
-            [self forwardSelector:selector arguments:arguments options:options];
-        }
+        // Should always have valid settings, flush message queue & new API call
+        [self flushMessageQueue];
+        [self forwardSelector:selector arguments:arguments options:options];
     });
 }
 
@@ -137,12 +127,6 @@ static NSInteger const AnalyticsSettingsUpdateInterval = 3600;
     SEL selector = NSSelectorFromString(selectorMapping[note.name]);
     if (selector)
         [self callProvidersWithSelector:selector arguments:nil options:nil];
-}
-
-#pragma mark - Public API
-
-- (NSString *)description {
-    return [NSString stringWithFormat:@"<Analytics secret:%@>", self.secret];
 }
 
 #pragma mark - Analytics API
@@ -200,19 +184,6 @@ static NSInteger const AnalyticsSettingsUpdateInterval = 3600;
 
 #pragma mark - Analytics Settings
 
-- (NSDictionary *)cachedSettings {
-    if (!_cachedSettings)
-        _cachedSettings = [NSDictionary dictionaryWithContentsOfURL:SETTING_CACHE_URL] ?: @{};
-    return _cachedSettings;
-}
-
-- (void)setCachedSettings:(NSDictionary *)settings {
-    //_cachedSettings = settings;
-    //[_cachedSettings ?: @{} writeToURL:SETTING_CACHE_URL atomically:YES];
-    
-    
-}
-
 - (void)updateProvidersWithSettings:(NSDictionary *)settings {
     for (id<AnalyticsProvider> provider in self.providers.allValues)
         [provider updateSettings:settings[provider.name]];
@@ -221,29 +192,6 @@ static NSInteger const AnalyticsSettingsUpdateInterval = 3600;
     });
 }
 
-- (void)refreshSettings {
-    /*
-    if (!_settingsRequest) {
-        NSString *urlString = [NSString stringWithFormat:@"http://api.segment.io/project/%@/settings", self.secret];
-        NSURL *url = [NSURL URLWithString:urlString];
-        NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
-        [urlRequest setValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"];
-        [urlRequest setHTTPMethod:@"GET"];
-        SOLog(@"%@ Sending API settings request: %@", self, urlRequest);
-        
-        _settingsRequest = [AnalyticsRequest startWithURLRequest:urlRequest completion:^{
-            dispatch_specific_async(_serialQueue, ^{
-                SOLog(@"%@ Received API settings response: %@", self, _settingsRequest.responseJSON);
-                if (!_settingsRequest.error) {
-                    [self setCachedSettings:_settingsRequest.responseJSON];
-                }
-                _settingsRequest = nil;
-            });
-        }];
-    }
-    */
-
-}
 
 #pragma mark - Class Methods
 
@@ -264,11 +212,11 @@ static NSMutableDictionary *RegisteredProviders = nil;
 
 static Analytics *SharedInstance = nil;
 
-+ (void)initializeWithNothing {
++ (void)initializeWithSettings:(NSDictionary *)settings {
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        SharedInstance = [[self alloc] initWithNothing];
+        SharedInstance = [[self alloc] initWithSettings:settings];
     });
 }
 
