@@ -4,12 +4,13 @@ This is a modified version of the segment.io analytics-ios SDK. The dependence o
 Settings for each Provider is passed in the at initialization as an NSDictionary. The values needed to initialize each Provider can be found by digging into the Provider classes and examples can bee seen in the settings.json file included in Project.
 
 Example initializing a Mixpanel Provider below.
+
     - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-        ...
-        NSDictionary *settings = @{@"Mixpanel" : @{@"token" : @"89f86c4aa2ce5b74cb47eb5ec95ad1f9"}};
-        [Analytics debug:YES];
-        [Analytics initializeWithSettings:settings];
-        ...
+    ...
+    NSDictionary *settings = @{@"Mixpanel" : @{@"token" : @"89f86c4aa2ce5b74cb47eb5ec95ad1f9"}};
+    [Analytics debug:YES];
+    [Analytics initializeWithSettings:settings];
+    ...
     }
 
 
