@@ -28,6 +28,8 @@
 		7E94C0F018932A5B004BD132 /* KWBlockMatchEvaluator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E94C0EF18932A5B004BD132 /* KWBlockMatchEvaluator.m */; };
 		7EA1CA851898033000DC8637 /* KWNotificationMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1CA841898033000DC8637 /* KWNotificationMatcher.m */; };
 		B8A1B15E08994855871D1685 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B38155D048462482A91850 /* libPods.a */; };
+		D309DBF318A2BD2900BA9F31 /* libFlurry_4.3.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D309DBF218A2BD2900BA9F31 /* libFlurry_4.3.1.a */; };
+		D31C8F7E18A2D83700DA22A6 /* MPNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = D31C8F7D18A2D83700DA22A6 /* MPNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D331BCED185BFAA1007CB22F /* MPSurvey.h in Headers */ = {isa = PBXBuildFile; fileRef = D331BCEC185BFAA1007CB22F /* MPSurvey.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D331BCF2185BFF49007CB22F /* CRFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = D331BCF0185BFF49007CB22F /* CRFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D331BCF3185BFF4A007CB22F /* CrittercismDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D331BCF1185BFF49007CB22F /* CrittercismDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -66,7 +68,6 @@
 		D371F332185942DE0053337D /* GAI.h in Headers */ = {isa = PBXBuildFile; fileRef = D371F331185942DE0053337D /* GAI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D371F334185943170053337D /* Mixpanel.h in Headers */ = {isa = PBXBuildFile; fileRef = D371F333185943170053337D /* Mixpanel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D37F756D189237360037E851 /* libCrittercism_v4_3_1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D37F756C189237360037E851 /* libCrittercism_v4_3_1.a */; };
-		D37F756F189237430037E851 /* libFlurry_4.3.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D37F756E189237430037E851 /* libFlurry_4.3.0.a */; };
 		D3ABF62F1846F6E000FAAB2B /* CrittercismProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = D3ABF62D1846F6E000FAAB2B /* CrittercismProvider.h */; };
 		D3ABF6301846F6E000FAAB2B /* CrittercismProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = D3ABF62E1846F6E000FAAB2B /* CrittercismProvider.m */; };
 		D3C07FBF185954D000649011 /* Bugsnag.h in Headers */ = {isa = PBXBuildFile; fileRef = D3C07FBE185954D000649011 /* Bugsnag.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -135,6 +136,8 @@
 		7EA1CA831898033000DC8637 /* KWNotificationMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWNotificationMatcher.h; sourceTree = "<group>"; };
 		7EA1CA841898033000DC8637 /* KWNotificationMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWNotificationMatcher.m; sourceTree = "<group>"; };
 		8D0FCA5DB8CF4351BA2EC04C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		D309DBF218A2BD2900BA9F31 /* libFlurry_4.3.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFlurry_4.3.1.a; path = Pods/FlurrySDK/Flurry/libFlurry_4.3.1.a; sourceTree = "<group>"; };
+		D31C8F7D18A2D83700DA22A6 /* MPNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MPNotification.h; path = Pods/Mixpanel/Mixpanel/MPNotification.h; sourceTree = "<group>"; };
 		D331BCEC185BFAA1007CB22F /* MPSurvey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MPSurvey.h; path = Pods/Mixpanel/Mixpanel/MPSurvey.h; sourceTree = "<group>"; };
 		D331BCF0185BFF49007CB22F /* CRFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CRFilter.h; path = Pods/CrittercismSDK/CrittercismSDK/CRFilter.h; sourceTree = "<group>"; };
 		D331BCF1185BFF49007CB22F /* CrittercismDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CrittercismDelegate.h; path = Pods/CrittercismSDK/CrittercismSDK/CrittercismDelegate.h; sourceTree = "<group>"; };
@@ -171,7 +174,6 @@
 		D350D6121859340700F8A7FA /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		D369201C181604CD009F24C0 /* libFlurry_4.2.4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFlurry_4.2.4.a; path = Pods/FlurrySDK/Flurry/libFlurry_4.2.4.a; sourceTree = "<group>"; };
 		D36ABA63182F09F3001EB84B /* admsAppLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = admsAppLibrary.a; path = Pods/Omniture/admsAppLibrary.a; sourceTree = "<group>"; };
-		D371F32B185942A50053337D /* CBTracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CBTracker.h; path = Pods/Chartbeat/CBTracker.h; sourceTree = "<group>"; };
 		D371F32D185942BB0053337D /* Crittercism.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Crittercism.h; path = Pods/CrittercismSDK/CrittercismSDK/Crittercism.h; sourceTree = "<group>"; };
 		D371F32F185942C90053337D /* Flurry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Flurry.h; path = Pods/FlurrySDK/Flurry/Flurry.h; sourceTree = "<group>"; };
 		D371F331185942DE0053337D /* GAI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GAI.h; path = "Pods/GoogleAnalytics-iOS-SDK/GoogleAnalytics/Library/GAI.h"; sourceTree = "<group>"; };
@@ -256,7 +258,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D37F756F189237430037E851 /* libFlurry_4.3.0.a in Frameworks */,
+				D309DBF318A2BD2900BA9F31 /* libFlurry_4.3.1.a in Frameworks */,
 				D37F756D189237360037E851 /* libCrittercism_v4_3_1.a in Frameworks */,
 				F78D29FA1765B382000B937E /* UIKit.framework in Frameworks */,
 				F7200B7717659B2F003F3138 /* Foundation.framework in Frameworks */,
@@ -289,6 +291,7 @@
 		D3D35174186242B4005586E7 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				D31C8F7D18A2D83700DA22A6 /* MPNotification.h */,
 				D331BD1D1860F5F0007CB22F /* TSApi.h */,
 				D331BD1E1860F5F0007CB22F /* TSAppEventSource.h */,
 				D331BD1F1860F5F0007CB22F /* TSConfig.h */,
@@ -322,7 +325,6 @@
 				D371F32D185942BB0053337D /* Crittercism.h */,
 				D331BCF0185BFF49007CB22F /* CRFilter.h */,
 				D331BCF1185BFF49007CB22F /* CrittercismDelegate.h */,
-				D371F32B185942A50053337D /* CBTracker.h */,
 				D371F333185943170053337D /* Mixpanel.h */,
 				D331BCEC185BFAA1007CB22F /* MPSurvey.h */,
 			);
@@ -459,6 +461,7 @@
 		F7200B7517659B2F003F3138 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D309DBF218A2BD2900BA9F31 /* libFlurry_4.3.1.a */,
 				D37F756E189237430037E851 /* libFlurry_4.3.0.a */,
 				D37F756C189237360037E851 /* libCrittercism_v4_3_1.a */,
 				D39E122F1846F816009F64E7 /* libCrittercism_v4_1_2.a */,
@@ -531,6 +534,7 @@
 				D331BCFD185C2DC4007CB22F /* GAITracker.h in Headers */,
 				D371F334185943170053337D /* Mixpanel.h in Headers */,
 				D331BCED185BFAA1007CB22F /* MPSurvey.h in Headers */,
+				D31C8F7E18A2D83700DA22A6 /* MPNotification.h in Headers */,
 				D331BD06185FDDEA007CB22F /* BugsnagConfiguration.h in Headers */,
 				D331BD07185FDDEA007CB22F /* BugsnagDictionary.h in Headers */,
 				D331BD08185FDDEA007CB22F /* BugsnagEvent.h in Headers */,
@@ -853,7 +857,7 @@
 		EA25891F17C693C2000CEF61 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ANALYTICS_VERSION = 0.9.6;
+				ANALYTICS_VERSION = 0.9.8;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -862,7 +866,7 @@
 		EA25892017C693C2000CEF61 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ANALYTICS_VERSION = 0.9.6;
+				ANALYTICS_VERSION = 0.9.8;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -965,7 +969,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8D0FCA5DB8CF4351BA2EC04C /* Pods.xcconfig */;
 			buildSettings = {
-				ANALYTICS_VERSION = 0.9.6;
+				ANALYTICS_VERSION = 0.9.8;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/Analytics.dst;
@@ -994,7 +998,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8D0FCA5DB8CF4351BA2EC04C /* Pods.xcconfig */;
 			buildSettings = {
-				ANALYTICS_VERSION = 0.9.6;
+				ANALYTICS_VERSION = 0.9.8;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = NO;
