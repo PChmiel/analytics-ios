@@ -27,8 +27,8 @@
 		2822D60017E26C9E005B2B7F /* NSContainer+Subscripting.m in Sources */ = {isa = PBXBuildFile; fileRef = 2822D5FE17E26C9E005B2B7F /* NSContainer+Subscripting.m */; };
 		7E94C0F018932A5B004BD132 /* KWBlockMatchEvaluator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E94C0EF18932A5B004BD132 /* KWBlockMatchEvaluator.m */; };
 		7EA1CA851898033000DC8637 /* KWNotificationMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1CA841898033000DC8637 /* KWNotificationMatcher.m */; };
+		9FD7817E18A9601000ECA1B3 /* libFlurry_4.3.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD7817D18A9601000ECA1B3 /* libFlurry_4.3.2.a */; };
 		B8A1B15E08994855871D1685 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B38155D048462482A91850 /* libPods.a */; };
-		D309DBF318A2BD2900BA9F31 /* libFlurry_4.3.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D309DBF218A2BD2900BA9F31 /* libFlurry_4.3.1.a */; };
 		D31C8F7E18A2D83700DA22A6 /* MPNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = D31C8F7D18A2D83700DA22A6 /* MPNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D331BCED185BFAA1007CB22F /* MPSurvey.h in Headers */ = {isa = PBXBuildFile; fileRef = D331BCEC185BFAA1007CB22F /* MPSurvey.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D331BCF2185BFF49007CB22F /* CRFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = D331BCF0185BFF49007CB22F /* CRFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -136,7 +136,7 @@
 		7EA1CA831898033000DC8637 /* KWNotificationMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWNotificationMatcher.h; sourceTree = "<group>"; };
 		7EA1CA841898033000DC8637 /* KWNotificationMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWNotificationMatcher.m; sourceTree = "<group>"; };
 		8D0FCA5DB8CF4351BA2EC04C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
-		D309DBF218A2BD2900BA9F31 /* libFlurry_4.3.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFlurry_4.3.1.a; path = Pods/FlurrySDK/Flurry/libFlurry_4.3.1.a; sourceTree = "<group>"; };
+		9FD7817D18A9601000ECA1B3 /* libFlurry_4.3.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFlurry_4.3.2.a; path = Pods/FlurrySDK/Flurry/libFlurry_4.3.2.a; sourceTree = "<group>"; };
 		D31C8F7D18A2D83700DA22A6 /* MPNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MPNotification.h; path = Pods/Mixpanel/Mixpanel/MPNotification.h; sourceTree = "<group>"; };
 		D331BCEC185BFAA1007CB22F /* MPSurvey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MPSurvey.h; path = Pods/Mixpanel/Mixpanel/MPSurvey.h; sourceTree = "<group>"; };
 		D331BCF0185BFF49007CB22F /* CRFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CRFilter.h; path = Pods/CrittercismSDK/CrittercismSDK/CRFilter.h; sourceTree = "<group>"; };
@@ -172,15 +172,12 @@
 		D331BD2A1860F5F0007CB22F /* TSUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TSUtils.h; path = Pods/Tapstream/objc/Core/TSUtils.h; sourceTree = "<group>"; };
 		D350D6111859340700F8A7FA /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		D350D6121859340700F8A7FA /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		D369201C181604CD009F24C0 /* libFlurry_4.2.4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFlurry_4.2.4.a; path = Pods/FlurrySDK/Flurry/libFlurry_4.2.4.a; sourceTree = "<group>"; };
 		D36ABA63182F09F3001EB84B /* admsAppLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = admsAppLibrary.a; path = Pods/Omniture/admsAppLibrary.a; sourceTree = "<group>"; };
 		D371F32D185942BB0053337D /* Crittercism.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Crittercism.h; path = Pods/CrittercismSDK/CrittercismSDK/Crittercism.h; sourceTree = "<group>"; };
 		D371F32F185942C90053337D /* Flurry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Flurry.h; path = Pods/FlurrySDK/Flurry/Flurry.h; sourceTree = "<group>"; };
 		D371F331185942DE0053337D /* GAI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GAI.h; path = "Pods/GoogleAnalytics-iOS-SDK/GoogleAnalytics/Library/GAI.h"; sourceTree = "<group>"; };
 		D371F333185943170053337D /* Mixpanel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Mixpanel.h; path = Pods/Mixpanel/Mixpanel/Mixpanel.h; sourceTree = "<group>"; };
 		D37F756C189237360037E851 /* libCrittercism_v4_3_1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCrittercism_v4_3_1.a; path = Pods/CrittercismSDK/CrittercismSDK/libCrittercism_v4_3_1.a; sourceTree = "<group>"; };
-		D37F756E189237430037E851 /* libFlurry_4.3.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFlurry_4.3.0.a; path = Pods/FlurrySDK/Flurry/libFlurry_4.3.0.a; sourceTree = "<group>"; };
-		D39E122F1846F816009F64E7 /* libCrittercism_v4_1_2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCrittercism_v4_1_2.a; path = Pods/CrittercismSDK/CrittercismSDK/libCrittercism_v4_1_2.a; sourceTree = "<group>"; };
 		D3ABF62D1846F6E000FAAB2B /* CrittercismProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrittercismProvider.h; sourceTree = "<group>"; };
 		D3ABF62E1846F6E000FAAB2B /* CrittercismProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrittercismProvider.m; sourceTree = "<group>"; };
 		D3C07FBE185954D000649011 /* Bugsnag.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Bugsnag.h; path = Pods/Bugsnag/bugsnag/Bugsnag.h; sourceTree = "<group>"; };
@@ -258,12 +255,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D309DBF318A2BD2900BA9F31 /* libFlurry_4.3.1.a in Frameworks */,
 				D37F756D189237360037E851 /* libCrittercism_v4_3_1.a in Frameworks */,
 				F78D29FA1765B382000B937E /* UIKit.framework in Frameworks */,
 				F7200B7717659B2F003F3138 /* Foundation.framework in Frameworks */,
 				B8A1B15E08994855871D1685 /* libPods.a in Frameworks */,
 				EACAAD6817C75FE5000A8337 /* libGoogleAnalyticsServices.a in Frameworks */,
+				9FD7817E18A9601000ECA1B3 /* libFlurry_4.3.2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,12 +458,9 @@
 		F7200B7517659B2F003F3138 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D309DBF218A2BD2900BA9F31 /* libFlurry_4.3.1.a */,
-				D37F756E189237430037E851 /* libFlurry_4.3.0.a */,
+				9FD7817D18A9601000ECA1B3 /* libFlurry_4.3.2.a */,
 				D37F756C189237360037E851 /* libCrittercism_v4_3_1.a */,
-				D39E122F1846F816009F64E7 /* libCrittercism_v4_1_2.a */,
 				D36ABA63182F09F3001EB84B /* admsAppLibrary.a */,
-				D369201C181604CD009F24C0 /* libFlurry_4.2.4.a */,
 				F78D29F91765B382000B937E /* UIKit.framework */,
 				F7200B7617659B2F003F3138 /* Foundation.framework */,
 				EACAAD6B17C7601C000A8337 /* libChartbeat-iOS-SDK.a */,
@@ -983,6 +977,7 @@
 					"/Users/reinpk/dev/segmentio-project/analytics-ios/Pods/CrittercismSDK/CrittercismSDK",
 					"/Users/reinpk/dev/segmentio/analytics-ios/Pods/CrittercismSDK/CrittercismSDK",
 					"/Users/reinpk/dev/segmentio/analytics-ios/Pods/FlurrySDK/Flurry",
+					"/Developer/analytics-ios/Pods/FlurrySDK/Flurry",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
@@ -1013,6 +1008,7 @@
 					"/Users/reinpk/dev/segmentio-project/analytics-ios/Pods/CrittercismSDK/CrittercismSDK",
 					"/Users/reinpk/dev/segmentio/analytics-ios/Pods/CrittercismSDK/CrittercismSDK",
 					"/Users/reinpk/dev/segmentio/analytics-ios/Pods/FlurrySDK/Flurry",
+					"/Developer/analytics-ios/Pods/FlurrySDK/Flurry",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRIVATE_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers/Private";
