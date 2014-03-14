@@ -76,7 +76,10 @@
 
 - (void)screen:(NSString *)screenTitle properties:(NSDictionary *)properties options:(NSDictionary *)options {
     // Track the screen view as an event.
-    [self track:screenTitle properties:properties options:options];
+    NSMutableDictionary *updatedPropertiers = [NSMutableDictionary dictionaryWithDictionary:properties];
+    [updatedPropertiers setObject:screenTitle forKey:@"Page Name"];
+    
+    [self track:@"Page View" properties:properties options:options];
 }
 
 - (void)registerPushDeviceToken:(NSData *)deviceToken {
