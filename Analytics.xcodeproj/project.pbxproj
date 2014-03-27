@@ -27,6 +27,8 @@
 		2822D60017E26C9E005B2B7F /* NSContainer+Subscripting.m in Sources */ = {isa = PBXBuildFile; fileRef = 2822D5FE17E26C9E005B2B7F /* NSContainer+Subscripting.m */; };
 		7E94C0F018932A5B004BD132 /* KWBlockMatchEvaluator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E94C0EF18932A5B004BD132 /* KWBlockMatchEvaluator.m */; };
 		7EA1CA851898033000DC8637 /* KWNotificationMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1CA841898033000DC8637 /* KWNotificationMatcher.m */; };
+		9F11F53218E4A9D800F5C8D6 /* SambaProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F11F53018E4A9D800F5C8D6 /* SambaProvider.h */; };
+		9F11F53318E4A9D800F5C8D6 /* SambaProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F11F53118E4A9D800F5C8D6 /* SambaProvider.m */; };
 		9FD7817E18A9601000ECA1B3 /* libFlurry_4.3.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD7817D18A9601000ECA1B3 /* libFlurry_4.3.2.a */; };
 		B8A1B15E08994855871D1685 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B38155D048462482A91850 /* libPods.a */; };
 		D31C8F7E18A2D83700DA22A6 /* MPNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = D31C8F7D18A2D83700DA22A6 /* MPNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -136,6 +138,8 @@
 		7EA1CA831898033000DC8637 /* KWNotificationMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWNotificationMatcher.h; sourceTree = "<group>"; };
 		7EA1CA841898033000DC8637 /* KWNotificationMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWNotificationMatcher.m; sourceTree = "<group>"; };
 		8D0FCA5DB8CF4351BA2EC04C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		9F11F53018E4A9D800F5C8D6 /* SambaProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SambaProvider.h; sourceTree = "<group>"; };
+		9F11F53118E4A9D800F5C8D6 /* SambaProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SambaProvider.m; sourceTree = "<group>"; };
 		9FD7817D18A9601000ECA1B3 /* libFlurry_4.3.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFlurry_4.3.2.a; path = Pods/FlurrySDK/Flurry/libFlurry_4.3.2.a; sourceTree = "<group>"; };
 		D31C8F7D18A2D83700DA22A6 /* MPNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MPNotification.h; path = Pods/Mixpanel/Mixpanel/MPNotification.h; sourceTree = "<group>"; };
 		D331BCEC185BFAA1007CB22F /* MPSurvey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MPSurvey.h; path = Pods/Mixpanel/Mixpanel/MPSurvey.h; sourceTree = "<group>"; };
@@ -267,6 +271,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F11F52F18E4A9D800F5C8D6 /* Samba */ = {
+			isa = PBXGroup;
+			children = (
+				9F11F53018E4A9D800F5C8D6 /* SambaProvider.h */,
+				9F11F53118E4A9D800F5C8D6 /* SambaProvider.m */,
+			);
+			path = Samba;
+			sourceTree = "<group>";
+		};
 		D331BD101860EA83007CB22F /* Tapstream */ = {
 			isa = PBXGroup;
 			children = (
@@ -365,6 +378,7 @@
 				EACB4DBF17C0BB3100624129 /* GoogleAnalytics */,
 				EACB4DC517C0BB3100624129 /* Localytics */,
 				EACB4DC817C0BB3100624129 /* Mixpanel */,
+				9F11F52F18E4A9D800F5C8D6 /* Samba */,
 				D331BD101860EA83007CB22F /* Tapstream */,
 			);
 			path = Providers;
@@ -535,6 +549,7 @@
 				D331BD09185FDDEA007CB22F /* BugsnagLogger.h in Headers */,
 				D331BD131860EA9A007CB22F /* TapstreamProvider.h in Headers */,
 				D331BD191860F5D4007CB22F /* TSAppEventSourceImpl.h in Headers */,
+				9F11F53218E4A9D800F5C8D6 /* SambaProvider.h in Headers */,
 				D331BD1A1860F5D4007CB22F /* TSCoreListenerImpl.h in Headers */,
 				D331BD1B1860F5D4007CB22F /* TSPlatformImpl.h in Headers */,
 				D331BD1C1860F5D4007CB22F /* TSTapstream.h in Headers */,
@@ -830,6 +845,7 @@
 				EACB4DDF17C0BB3100624129 /* GoogleAnalyticsProvider.m in Sources */,
 				EACB4DE317C0BB3100624129 /* LocalyticsProvider.m in Sources */,
 				D331BD141860EA9A007CB22F /* TapstreamProvider.m in Sources */,
+				9F11F53318E4A9D800F5C8D6 /* SambaProvider.m in Sources */,
 				EACB4DE517C0BB3100624129 /* MixpanelProvider.m in Sources */,
 				EACB4DEB17C0BB3100624129 /* AnalyticsUtils.m in Sources */,
 				EAA604CA17C28C7C00911919 /* AnalyticsRequest.m in Sources */,
@@ -851,7 +867,7 @@
 		EA25891F17C693C2000CEF61 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ANALYTICS_VERSION = 0.9.8;
+				ANALYTICS_VERSION = 0.9.8.2;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -860,7 +876,7 @@
 		EA25892017C693C2000CEF61 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ANALYTICS_VERSION = 0.9.8;
+				ANALYTICS_VERSION = 0.9.8.2;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -963,7 +979,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8D0FCA5DB8CF4351BA2EC04C /* Pods.xcconfig */;
 			buildSettings = {
-				ANALYTICS_VERSION = 0.9.8;
+				ANALYTICS_VERSION = 0.9.8.2;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/Analytics.dst;
@@ -993,7 +1009,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8D0FCA5DB8CF4351BA2EC04C /* Pods.xcconfig */;
 			buildSettings = {
-				ANALYTICS_VERSION = 0.9.8;
+				ANALYTICS_VERSION = 0.9.8.2;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = NO;
