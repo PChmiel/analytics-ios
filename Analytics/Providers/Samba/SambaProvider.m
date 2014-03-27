@@ -192,10 +192,6 @@ static NSString *GetSessionID(BOOL reset) {
     }];
 }
 
-- (void)updateSettings:(NSDictionary *)settings {
-    
-}
-
 - (void)validate {
     BOOL hasUrl = [self.settings objectForKey:@"url"] != nil;
     self.valid = hasUrl;
