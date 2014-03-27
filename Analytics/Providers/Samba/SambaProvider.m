@@ -257,14 +257,14 @@ static NSString *GetSessionID(BOOL reset) {
     [self enqueueAction:@"screen" dictionary:dictionary options:options];
 }
 
-- (void)discoverDevices:(NSString *)sambaDeviceId devices:(NSArray *)deviceIds options:(NSDictionary *)options {
-    NSAssert(sambaDeviceId.length, @"%@ screen requires a device id.", self);
+- (void)discoverDevices:(NSString *)sambaDeviceId devices:(NSDictionary *)discoveredDevices options:(NSDictionary *)options {
+    NSAssert(sambaDeviceId.length, @"%@ discoverDevices requires a device id.", self);
     
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
     [dictionary setValue:sambaDeviceId forKey:@"samba_device_id"];
-    [dictionary setValue:deviceIds forKey:@"devices"];
+    [dictionary setValue:discoveredDevices forKey:@"discovered_devices"];
     
-    [self enqueueAction:@"devices" dictionary:dictionary options:options];
+    [self enqueueAction:@"discoverDevices" dictionary:dictionary options:options];
 }
 
 #pragma mark - Queueing

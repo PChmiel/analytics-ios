@@ -44,7 +44,7 @@
 - (void)identify:(NSString *)userId traits:(NSDictionary *)traits options:(NSDictionary *)options { }
 - (void)track:(NSString *)event properties:(NSDictionary *)properties options:(NSDictionary *)options { }
 - (void)screen:(NSString *)screenTitle properties:(NSDictionary *)properties options:(NSDictionary *)options { }
-- (void)discoverDevices:(NSString *)sambaDeviceId devices:(NSArray *)deviceIds { }
+- (void)discoverDevices:(NSString *)sambaDeviceId devices:(NSDictionary *)discoveredDevices options:(NSDictionary *)options { }
 
 - (void)applicationDidEnterBackground { }
 - (void)applicationWillEnterForeground { }

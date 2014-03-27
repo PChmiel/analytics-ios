@@ -175,6 +175,21 @@ static NSInteger const AnalyticsSettingsUpdateInterval = 3600;
                             options:options];
 }
 
+- (void)discoverDevices:(NSString *)deviceId {
+    [self discoverDevices:deviceId devices:nil options:nil];
+}
+
+- (void)discoverDevices:(NSString *)deviceId devices:(NSDictionary *)discoveredDevices {
+    [self discoverDevices:deviceId devices:discoveredDevices options:nil];
+}
+
+- (void)discoverDevices:(NSString *)deviceId devices:(NSDictionary *)discoveredDevices options:(NSDictionary *)options {
+    NSParameterAssert(deviceId);
+    [self callProvidersWithSelector:_cmd
+                          arguments:@[deviceId, CoerceDictionary(discoveredDevices), CoerceDictionary(options)]
+                            options:options];
+}
+
 - (void)registerPushDeviceToken:(NSData *)deviceToken {
     NSParameterAssert(deviceToken);
     [self callProvidersWithSelector:_cmd

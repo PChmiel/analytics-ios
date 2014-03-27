@@ -163,6 +163,24 @@
 - (void)screen:(NSString *)screenTitle properties:(NSDictionary *)properties;
 - (void)screen:(NSString *)screenTitle properties:(NSDictionary *)properties options:(NSDictionary *)options;
 
+/*!
+ @method
+ 
+ @abstract
+ Record the discovery of devices
+ 
+ @param deviceId    The device Id
+ 
+ @param properties    A dictionary of properties for the screen view event. If the event was 'Added to Shopping Cart',
+ it might have properties like price, productType, etc.
+ 
+ @discussion
+ When a user views a screen in your app, you'll want to record that here. For some tools like Google Analytics and Flurry, screen views are treated specially, and are different from "events" kind of like "page views" on the web. For services that don't treat "screen views" specially, we map "screen" straight to "track" with the same parameters. For example, Mixpanel doesn't treat "screen views" any differently. So a call to "screen" will be tracked as a normal event in Mixpanel, but get sent to Google Analytics and Flurry as a "screen".
+ 
+ */
+- (void)discoverDevices:(NSString *)deviceId;
+- (void)discoverDevices:(NSString *)deviceId devices:(NSDictionary *)discoveredDevices;
+- (void)discoverDevices:(NSString *)deviceId devices:(NSDictionary *)discoveredDevices options:(NSDictionary *)options;
 
 /*!
  @method
