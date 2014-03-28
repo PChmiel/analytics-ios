@@ -45,7 +45,7 @@ static NSString *GetSessionID(BOOL reset) {
 @interface SambaProvider ()
 
 @property (nonatomic, weak) Analytics *analytics;
-@property (nonatomic, strong) NSURL *url;
+@property (nonatomic, strong) NSString *url;
 @property (nonatomic, strong) NSTimer *flushTimer;
 @property (nonatomic, strong) NSMutableArray *queue;
 @property (nonatomic, strong) NSArray *batch;
@@ -113,33 +113,36 @@ static NSString *GetSessionID(BOOL reset) {
     NSMutableDictionary *deviceInfo = [NSMutableDictionary dictionary];
     
     // Application information
-    [deviceInfo setValue:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"] forKey:@"appVersion"];
-    [deviceInfo setValue:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] forKey:@"appReleaseVersion"];
+    [deviceInfo setValue:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"] forKey:@"sa_app_version"];
+    [deviceInfo setValue:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] forKey:@"sa_app_release"];
     
     // Device information
     UIDevice *device = [UIDevice currentDevice];
     NSString *deviceModel = [self deviceModel];
-    [deviceInfo setValue:@"Apple" forKey:@"deviceManufacturer"];
-    [deviceInfo setValue:deviceModel forKey:@"deviceModel"];
-    [deviceInfo setValue:[device systemName] forKey:@"os"];
-    [deviceInfo setValue:[device systemVersion] forKey:@"osVersion"];
+    [deviceInfo setValue:@"Apple" forKey:@"sa_device_manufacturer"];
+    [deviceInfo setValue:deviceModel forKey:@"sa_device_model"];
+    [deviceInfo setValue:[device systemName] forKey:@"sa_os"];
+    [deviceInfo setValue:[device systemVersion] forKey:@"sa_os_version"];
     
     // Network Carrier
     CTTelephonyNetworkInfo *networkInfo = [[CTTelephonyNetworkInfo alloc] init];
     CTCarrier *carrier = [networkInfo subscriberCellularProvider];
     if (carrier.carrierName.length) {
-        [deviceInfo setValue:carrier.carrierName forKey:@"carrier"];
+        [deviceInfo setValue:carrier.carrierName forKey:@"sa_carrier"];
     }
     
     // ID for Advertiser (IFA)
     if (NSClassFromString(@"ASIdentifierManager")) {
-        [deviceInfo setValue:[self getIdForAdvertiser] forKey:@"idForAdvertiser"];
+        [deviceInfo setValue:[self getIdForAdvertiser] forKey:@"sa_idfa"];
     }
     
     // Screen size
-    CGSize screenSize = [UIScreen mainScreen].bounds.size;
-    [deviceInfo setValue:[NSNumber numberWithInt:(int)screenSize.width] forKey:@"screenWidth"];
-    [deviceInfo setValue:[NSNumber numberWithInt:(int)screenSize.height] forKey:@"screenHeight"];
+    CGRect screen = [[UIScreen mainScreen] bounds];
+    float scaleFactor = [[UIScreen mainScreen] scale];
+    CGFloat widthInPixel = screen.size.width * scaleFactor;
+    CGFloat heightInPixel = screen.size.height * scaleFactor;
+    [deviceInfo setValue:[NSNumber numberWithInt:(int)widthInPixel] forKey:@"sa_screen_width"];
+    [deviceInfo setValue:[NSNumber numberWithInt:(int)heightInPixel] forKey:@"sa_screen_height"];
     
     return deviceInfo;
 }
@@ -260,7 +263,7 @@ static NSString *GetSessionID(BOOL reset) {
     [dictionary setValue:sambaDeviceId forKey:@"samba_device_id"];
     [dictionary setValue:discoveredDevices forKey:@"discovered_devices"];
     
-    [self enqueueAction:@"discoverDevices" dictionary:dictionary options:options];
+    [self enqueueAction:@"devices" dictionary:dictionary options:options];
 }
 
 #pragma mark - Queueing
@@ -272,14 +275,24 @@ static NSString *GetSessionID(BOOL reset) {
         if (![provider isKindOfClass:[SambaProvider class]])
             providersDict[provider.name] = @NO;
     serverOptions[@"providers"] = providersDict;
-    serverOptions[@"library"] = @"analytics-ios";
-    serverOptions[@"library-version"] = NSStringize(ANALYTICS_VERSION);
+    serverOptions[@"sa_analytics"] = @"samba_analytics-ios";
+    serverOptions[@"sa_analytics_version"] = NSStringize(ANALYTICS_VERSION);
     serverOptions[@"traits"] = _traits;
     for(id key in _deviceInformation) {
         serverOptions[key] = [_deviceInformation objectForKey:key];
     }
-    return serverOptions;
     
+    if ([self.settings objectForKey:@"sdkName"]) {
+        serverOptions[@"sdk_name"] = [self.settings objectForKey:@"sdkName"];
+    }
+    if ([self.settings objectForKey:@"sdkVersion"]) {
+        serverOptions[@"sdk_version"] = [self.settings objectForKey:@"sdkVersion"];
+    }
+    if ([self.settings objectForKey:@"sdkCapabilities"]) {
+        serverOptions[@"sdk_capabilities"] = [self.settings objectForKey:@"sdkCapabilities"];
+    }
+    
+    return serverOptions;
 }
 
 - (void)enqueueAction:(NSString *)action dictionary:(NSMutableDictionary *)dictionary options:(NSDictionary *)options {
@@ -288,26 +301,51 @@ static NSString *GetSessionID(BOOL reset) {
     NSMutableDictionary *payload = [NSMutableDictionary dictionaryWithDictionary:dictionary];
     payload[@"action"] = action;
     payload[@"timestamp"] = [[NSDate date] description];
-    payload[@"requestId"] = GenerateUUIDString();
+    payload[@"request_id"] = GenerateUUIDString();
 
     [self dispatchBackground:^{
         // attach userId and sessionId inside the dispatch_async in case
         // they've changed (see identify function)
         [payload setValue:self.userId forKey:@"userId"];
-        [payload setValue:self.sessionId forKey:@"sessionId"];
+        [payload setValue:self.sessionId forKey:@"sa_sdk_session_id"];
         SOLog(@"%@ Enqueueing action: %@", self, payload);
         
-        // TODO change context to options when server-side is ready
-        [payload setValue:[self serverOptionsForOptions:options] forKey:@"context"];
+        //[payload setValue:[self serverOptionsForOptions:options] forKey:@"options"];
+        [payload addEntriesFromDictionary:[self serverOptionsForOptions:options]];
         [self.queue addObject:payload];
-        [self flushQueueByLength];
+        
+        //[self flushQueueByLength];
+        [self flush];
     }];
 }
 
 - (void)flush {
-    [self flushWithMaxSize:SAMBA_MAX_BATCH_SIZE];
+    //[self flushWithMaxSize:SAMBA_MAX_BATCH_SIZE];
+    
+    [self dispatchBackground:^{
+        if ([self.queue count] == 0) {
+            SOLog(@"%@ No queued API calls to flush.", self);
+            return;
+        }
+        
+        for(NSMutableDictionary *payloadDict in self.queue) {
+            SOLog(@"%@ Flushing 1 of %lu queued API calls.", self, (unsigned long)self.queue.count);
+            
+            NSString *action = [payloadDict objectForKey:@"action"];
+            NSString *sambaDeviceId = [payloadDict objectForKey:@"samba_device_id"];
+            if(!action || !sambaDeviceId) {
+                [self.queue removeObject:payloadDict];
+                continue;
+            }
+            NSString *endpoint = [NSString stringWithFormat:@"%@?samba_device_id=%@", action, sambaDeviceId];
+            NSData *payload = [NSJSONSerialization dataWithJSONObject:payloadDict
+                                                              options:0 error:NULL];
+            [self sendData:payload withParameter:endpoint];
+        }
+    }];
 }
 
+/*
 - (void)flushWithMaxSize:(NSUInteger)maxBatchSize {
     [self dispatchBackground:^{
         if ([self.queue count] == 0) {
@@ -343,6 +381,7 @@ static NSString *GetSessionID(BOOL reset) {
         }
     }];
 }
+*/
 
 - (void)reset {
     [self.flushTimer invalidate];
@@ -371,13 +410,14 @@ static NSString *GetSessionID(BOOL reset) {
     });
 }
 
-- (void)sendData:(NSData *)data {
-    NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:self.url];
+- (void)sendData:(NSData *)data withParameter:(NSString *)parameter {
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", self.url, parameter]];
+    NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
     [urlRequest setValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"];
     [urlRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [urlRequest setHTTPMethod:@"POST"];
     [urlRequest setHTTPBody:data];
-    SOLog(@"%@ Sending batch API request.", self);
+    SOLog(@"%@ Sending API request.", self);
     self.request = [AnalyticsRequest startWithURLRequest:urlRequest completion:^{
         [self dispatchBackground:^{
             if (self.request.error) {
@@ -385,7 +425,8 @@ static NSString *GetSessionID(BOOL reset) {
                 [self notifyForName:SambaRequestDidFailNotification userInfo:self.batch];
             } else {
                 SOLog(@"%@ API request success 200", self);
-                [self.queue removeObjectsInArray:self.batch];
+                [self.queue removeObjectAtIndex:0];
+                //[self.queue removeObjectsInArray:self.batch];
                 [self notifyForName:SambaRequestDidSucceedNotification userInfo:self.batch];
             }
             
@@ -401,7 +442,8 @@ static NSString *GetSessionID(BOOL reset) {
     [self beginBackgroundTask];
     // We are gonna try to flush as much as we reasonably can when we enter background
     // since there is a chance that the user will never launch the app again.
-    [self flushWithMaxSize:1000];
+    //[self flushWithMaxSize:1000];
+    [self flush];
 }
 
 - (void)applicationWillTerminate {
