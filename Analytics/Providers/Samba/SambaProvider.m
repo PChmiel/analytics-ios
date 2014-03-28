@@ -353,7 +353,7 @@ static NSString *GetSessionID(BOOL reset) {
             return;
         } else if (self.request != nil) {
             SOLog(@"%@ API request already in progress, not flushing again.", self);
-            NSLog(@"%@ %@", self.batch, self.request);
+            SOLog(@"%@ %@", self.batch, self.request);
             return;
         } else if ([self.queue count] >= maxBatchSize) {
             self.batch = [self.queue subarrayWithRange:NSMakeRange(0, maxBatchSize)];
@@ -406,7 +406,7 @@ static NSString *GetSessionID(BOOL reset) {
 - (void)notifyForName:(NSString *)name userInfo:(id)userInfo {
     dispatch_async(dispatch_get_main_queue(), ^{
         [[NSNotificationCenter defaultCenter] postNotificationName:name object:self];
-        NSLog(@"sent notification %@", name);
+        SOLog(@"sent notification %@", name);
     });
 }
 
