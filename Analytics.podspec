@@ -1,17 +1,16 @@
 Pod::Spec.new do |s|
-  s.name            = "Analytics"
-  s.version         = "0.9.8.2"
-  s.summary         = "Segment.io analytics and marketing tools library for iOS."
-  s.homepage        = "https://segment.io/libraries/ios"
-  s.license         = { :type => "MIT", :file => "License.md" }
-  s.author          = { "Segment.io" => "friends@segment.io" }
-  s.source          = { :http => "https://s3.amazonaws.com/segmentio/releases/ios/Analytics-#{s.version}.zip", 
+    s.name            = "Analytics"
+    s.version         = "0.9.8.3"
+    s.summary         = "Samba modified Segment.io analytics and marketing tools library for iOS. Removed dependence on segment.io dashboard and services."
+    s.homepage        = "https://github.com/SambaTVMobile/analytics-ios"
+    s.license         = { :type => "MIT", :file => "License.md" }
+    s.author          = { "Segment.io" => "friends@segment.io" }
+    s.source          = { :http => "", 
                         :flatten => true }
-  s.platform        = :ios, '6.0'
-  s.preserve_paths  = 'Analytics.framework'
-  s.source_files    = 'Analytics.framework/**/*.h'
-  s.frameworks      = 'Analytics', 'Foundation', 'UIKit', 'CoreData', 'SystemConfiguration', 
-                      'QuartzCore', 'CFNetwork', 'AdSupport', 'CoreTelephony', 'Security', 'CoreGraphics'
-  s.libraries       = 'sqlite3', 'z'
-  s.xcconfig        = { 'OTHER_LDFLAGS' => '-ObjC', 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/Analytics"' }
+    s.platform        = :ios, '6.0'
+    s.vendored_frameworks  = 'Analytics.framework'
+    s.frameworks      = 'Foundation', 'UIKit', 'CoreData', 'SystemConfiguration',
+    'QuartzCore', 'CFNetwork', 'AdSupport', 'CoreTelephony', 'Security', 'CoreGraphics'
+    s.libraries       = 'sqlite3', 'z'
+    s.xcconfig        = { 'OTHER_LDFLAGS' => '-ObjC' }
 end

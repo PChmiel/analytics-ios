@@ -22,19 +22,17 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		18E86AF9AC7C4CB494AEA208 /* libPods-AnalyticsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CD79ED9C3E478C83CB7A34 /* libPods-AnalyticsTests.a */; };
 		2822D5FF17E26C9E005B2B7F /* NSContainer+Subscripting.h in Headers */ = {isa = PBXBuildFile; fileRef = 2822D5FD17E26C9E005B2B7F /* NSContainer+Subscripting.h */; };
 		2822D60017E26C9E005B2B7F /* NSContainer+Subscripting.m in Sources */ = {isa = PBXBuildFile; fileRef = 2822D5FE17E26C9E005B2B7F /* NSContainer+Subscripting.m */; };
+		442A0F8DC1A5B50F940445D5 /* libPods-AnalyticsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 636C82C4B7319463AF4F8F01 /* libPods-AnalyticsTests.a */; };
 		7E94C0F018932A5B004BD132 /* KWBlockMatchEvaluator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E94C0EF18932A5B004BD132 /* KWBlockMatchEvaluator.m */; };
 		7EA1CA851898033000DC8637 /* KWNotificationMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1CA841898033000DC8637 /* KWNotificationMatcher.m */; };
 		9F11F53218E4A9D800F5C8D6 /* SambaProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F11F53018E4A9D800F5C8D6 /* SambaProvider.h */; };
 		9F11F53318E4A9D800F5C8D6 /* SambaProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F11F53118E4A9D800F5C8D6 /* SambaProvider.m */; };
 		9FD7817E18A9601000ECA1B3 /* libFlurry_4.3.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD7817D18A9601000ECA1B3 /* libFlurry_4.3.2.a */; };
-		B8A1B15E08994855871D1685 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B38155D048462482A91850 /* libPods.a */; };
+		C8B04E7664083B6F52226763 /* libPods-Analytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28DA93137988BC2449645EFB /* libPods-Analytics.a */; };
 		D31C8F7E18A2D83700DA22A6 /* MPNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = D31C8F7D18A2D83700DA22A6 /* MPNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D331BCED185BFAA1007CB22F /* MPSurvey.h in Headers */ = {isa = PBXBuildFile; fileRef = D331BCEC185BFAA1007CB22F /* MPSurvey.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D331BCF2185BFF49007CB22F /* CRFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = D331BCF0185BFF49007CB22F /* CRFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D331BCF3185BFF4A007CB22F /* CrittercismDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D331BCF1185BFF49007CB22F /* CrittercismDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D331BCFB185C2DC4007CB22F /* GAILogger.h in Headers */ = {isa = PBXBuildFile; fileRef = D331BCF8185C2DC4007CB22F /* GAILogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D331BCFC185C2DC4007CB22F /* GAITrackedViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D331BCF9185C2DC4007CB22F /* GAITrackedViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D331BCFD185C2DC4007CB22F /* GAITracker.h in Headers */ = {isa = PBXBuildFile; fileRef = D331BCFA185C2DC4007CB22F /* GAITracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -65,11 +63,9 @@
 		D331BD371860F5F0007CB22F /* TSResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = D331BD291860F5F0007CB22F /* TSResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D331BD381860F5F0007CB22F /* TSUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = D331BD2A1860F5F0007CB22F /* TSUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D350D6131859340700F8A7FA /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D350D6121859340700F8A7FA /* Reachability.m */; };
-		D371F32E185942BB0053337D /* Crittercism.h in Headers */ = {isa = PBXBuildFile; fileRef = D371F32D185942BB0053337D /* Crittercism.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D371F330185942C90053337D /* Flurry.h in Headers */ = {isa = PBXBuildFile; fileRef = D371F32F185942C90053337D /* Flurry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D371F332185942DE0053337D /* GAI.h in Headers */ = {isa = PBXBuildFile; fileRef = D371F331185942DE0053337D /* GAI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D371F334185943170053337D /* Mixpanel.h in Headers */ = {isa = PBXBuildFile; fileRef = D371F333185943170053337D /* Mixpanel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D37F756D189237360037E851 /* libCrittercism_v4_3_1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D37F756C189237360037E851 /* libCrittercism_v4_3_1.a */; };
 		D3ABF62F1846F6E000FAAB2B /* CrittercismProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = D3ABF62D1846F6E000FAAB2B /* CrittercismProvider.h */; };
 		D3ABF6301846F6E000FAAB2B /* CrittercismProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = D3ABF62E1846F6E000FAAB2B /* CrittercismProvider.m */; };
 		D3C07FBF185954D000649011 /* Bugsnag.h in Headers */ = {isa = PBXBuildFile; fileRef = D3C07FBE185954D000649011 /* Bugsnag.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -128,19 +124,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1292362745B3499F9F8849DB /* Pods-AnalyticsTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticsTests.xcconfig"; path = "Pods/Pods-AnalyticsTests.xcconfig"; sourceTree = SOURCE_ROOT; };
-		23CD79ED9C3E478C83CB7A34 /* libPods-AnalyticsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnalyticsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2822D5FD17E26C9E005B2B7F /* NSContainer+Subscripting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSContainer+Subscripting.h"; sourceTree = "<group>"; };
 		2822D5FE17E26C9E005B2B7F /* NSContainer+Subscripting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSContainer+Subscripting.m"; sourceTree = "<group>"; };
-		70B38155D048462482A91850 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		28DA93137988BC2449645EFB /* libPods-Analytics.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Analytics.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BAC5E0FBC04D7631D938E45 /* Pods-Analytics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Analytics.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Analytics/Pods-Analytics.debug.xcconfig"; sourceTree = "<group>"; };
+		630CD16DA592C55B88D0EB19 /* Pods-Analytics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Analytics.release.xcconfig"; path = "Pods/Target Support Files/Pods-Analytics/Pods-Analytics.release.xcconfig"; sourceTree = "<group>"; };
+		636C82C4B7319463AF4F8F01 /* libPods-AnalyticsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnalyticsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E94C0EE18932A5B004BD132 /* KWBlockMatchEvaluator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWBlockMatchEvaluator.h; sourceTree = "<group>"; };
 		7E94C0EF18932A5B004BD132 /* KWBlockMatchEvaluator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWBlockMatchEvaluator.m; sourceTree = "<group>"; };
 		7EA1CA831898033000DC8637 /* KWNotificationMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWNotificationMatcher.h; sourceTree = "<group>"; };
 		7EA1CA841898033000DC8637 /* KWNotificationMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWNotificationMatcher.m; sourceTree = "<group>"; };
-		8D0FCA5DB8CF4351BA2EC04C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		9F11F53018E4A9D800F5C8D6 /* SambaProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SambaProvider.h; sourceTree = "<group>"; };
 		9F11F53118E4A9D800F5C8D6 /* SambaProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SambaProvider.m; sourceTree = "<group>"; };
 		9FD7817D18A9601000ECA1B3 /* libFlurry_4.3.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFlurry_4.3.2.a; path = Pods/FlurrySDK/Flurry/libFlurry_4.3.2.a; sourceTree = "<group>"; };
+		B832851B56C17193D6A65FB2 /* Pods-AnalyticsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnalyticsTests/Pods-AnalyticsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BD9995F7C6075DBB36BFD1DB /* Pods-AnalyticsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnalyticsTests/Pods-AnalyticsTests.release.xcconfig"; sourceTree = "<group>"; };
 		D31C8F7D18A2D83700DA22A6 /* MPNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MPNotification.h; path = Pods/Mixpanel/Mixpanel/MPNotification.h; sourceTree = "<group>"; };
 		D331BCEC185BFAA1007CB22F /* MPSurvey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MPSurvey.h; path = Pods/Mixpanel/Mixpanel/MPSurvey.h; sourceTree = "<group>"; };
 		D331BCF0185BFF49007CB22F /* CRFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CRFilter.h; path = Pods/CrittercismSDK/CrittercismSDK/CRFilter.h; sourceTree = "<group>"; };
@@ -250,8 +248,8 @@
 				EABE4F3E17C8883A00A1081B /* libz.dylib in Frameworks */,
 				EABE4F3F17C8883A00A1081B /* libsqlite3.dylib in Frameworks */,
 				EAD415C717C9B72D00EB0490 /* SenTestingKit.framework in Frameworks */,
-				18E86AF9AC7C4CB494AEA208 /* libPods-AnalyticsTests.a in Frameworks */,
 				EA722B0317C883C00016E8B0 /* libAnalytics.a in Frameworks */,
+				442A0F8DC1A5B50F940445D5 /* libPods-AnalyticsTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,18 +257,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D37F756D189237360037E851 /* libCrittercism_v4_3_1.a in Frameworks */,
 				F78D29FA1765B382000B937E /* UIKit.framework in Frameworks */,
 				F7200B7717659B2F003F3138 /* Foundation.framework in Frameworks */,
-				B8A1B15E08994855871D1685 /* libPods.a in Frameworks */,
 				EACAAD6817C75FE5000A8337 /* libGoogleAnalyticsServices.a in Frameworks */,
 				9FD7817E18A9601000ECA1B3 /* libFlurry_4.3.2.a in Frameworks */,
+				C8B04E7664083B6F52226763 /* libPods-Analytics.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9DE8FBC7CF9F4CD3A5943037 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2BAC5E0FBC04D7631D938E45 /* Pods-Analytics.debug.xcconfig */,
+				630CD16DA592C55B88D0EB19 /* Pods-Analytics.release.xcconfig */,
+				B832851B56C17193D6A65FB2 /* Pods-AnalyticsTests.debug.xcconfig */,
+				BD9995F7C6075DBB36BFD1DB /* Pods-AnalyticsTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9F11F52F18E4A9D800F5C8D6 /* Samba */ = {
 			isa = PBXGroup;
 			children = (
@@ -455,8 +463,7 @@
 				EA722AF617C87BB00016E8B0 /* AnalyticsTests */,
 				F7200B7517659B2F003F3138 /* Frameworks */,
 				F7200B7417659B2F003F3138 /* Products */,
-				8D0FCA5DB8CF4351BA2EC04C /* Pods.xcconfig */,
-				1292362745B3499F9F8849DB /* Pods-AnalyticsTests.xcconfig */,
+				9DE8FBC7CF9F4CD3A5943037 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -479,7 +486,6 @@
 				F7200B7617659B2F003F3138 /* Foundation.framework */,
 				EACAAD6B17C7601C000A8337 /* libChartbeat-iOS-SDK.a */,
 				EACAAD6717C75FE5000A8337 /* libGoogleAnalyticsServices.a */,
-				70B38155D048462482A91850 /* libPods.a */,
 				EABE4F3017C887E000A1081B /* CoreGraphics.framework */,
 				EABE4F2E17C887D900A1081B /* Security.framework */,
 				EABE4F2C17C887D000A1081B /* CoreTelephony.framework */,
@@ -491,7 +497,8 @@
 				EABE4F3417C887E800A1081B /* libz.dylib */,
 				EABE4F3217C887E400A1081B /* libsqlite3.dylib */,
 				EA722AF217C87BB00016E8B0 /* SenTestingKit.framework */,
-				23CD79ED9C3E478C83CB7A34 /* libPods-AnalyticsTests.a */,
+				28DA93137988BC2449645EFB /* libPods-Analytics.a */,
+				636C82C4B7319463AF4F8F01 /* libPods-AnalyticsTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -532,9 +539,6 @@
 			files = (
 				EA25892317C6979D000CEF61 /* Analytics.h in Headers */,
 				D3C07FBF185954D000649011 /* Bugsnag.h in Headers */,
-				D371F32E185942BB0053337D /* Crittercism.h in Headers */,
-				D331BCF2185BFF49007CB22F /* CRFilter.h in Headers */,
-				D331BCF3185BFF4A007CB22F /* CrittercismDelegate.h in Headers */,
 				D371F330185942C90053337D /* Flurry.h in Headers */,
 				D371F332185942DE0053337D /* GAI.h in Headers */,
 				D331BCFB185C2DC4007CB22F /* GAILogger.h in Headers */,
@@ -591,13 +595,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA722B0017C87BB00016E8B0 /* Build configuration list for PBXNativeTarget "AnalyticsTests" */;
 			buildPhases = (
-				6CD29E69AA864B8BB2C719DF /* Check Pods Manifest.lock */,
+				F2BE04C6F0328ACA0A8FCF23 /* [CP] Check Pods Manifest.lock */,
 				EA722AEC17C87BB00016E8B0 /* Sources */,
 				EA722AED17C87BB00016E8B0 /* Frameworks */,
 				EA722AEE17C87BB00016E8B0 /* Resources */,
 				EA722AEF17C87BB00016E8B0 /* ShellScript */,
-				14458D73464944C0ACCBDE28 /* Copy Pods Resources */,
 				531D6AA25D31422B9D1EC3B5 /* Upload Bugsnag dSYM */,
+				DB6F1DF6B8FCE0ACBB30BA66 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -613,13 +617,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F7200B8117659B2F003F3138 /* Build configuration list for PBXNativeTarget "Analytics" */;
 			buildPhases = (
-				380BF1B2A860431EA9D5604F /* Check Pods Manifest.lock */,
+				C86018483751B7F96C858388 /* [CP] Check Pods Manifest.lock */,
 				EA8758AB17D7B77200833FB1 /* Sync Version Number References with ANALYTICS_VERSION */,
 				F7200B6F17659B2F003F3138 /* Sources */,
 				F7200B7017659B2F003F3138 /* Frameworks */,
 				F7200B8517659B83003F3138 /* Headers */,
-				BB672FCD0430415AB87EF64C /* Copy Pods Resources */,
 				7739C0ADA9C84AB390D7F617 /* Upload Bugsnag dSYM */,
+				190A2A39DDA6A863F6358ADD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -670,34 +674,52 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		14458D73464944C0ACCBDE28 /* Copy Pods Resources */ = {
+		190A2A39DDA6A863F6358ADD /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Analytics/Pods-Analytics-resources.sh",
+				"${PODS_ROOT}/Countly/Countly.xcdatamodeld",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPArrowLeft.imageset/MPArrowLeft.png",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPArrowLeft.imageset/MPArrowLeft@2x.png",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPArrowRight.imageset/MPArrowRight.png",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPArrowRight.imageset/MPArrowRight@2x.png",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPCheckmark.imageset/MPCheckmark.png",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPCheckmark.imageset/MPCheckmark@2x.png",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPCloseBtn.imageset/MPCloseBtn.png",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPCloseBtn.imageset/MPCloseBtn@2x.png",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPDismissKeyboard.imageset/MPDismissKeyboard.png",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPDismissKeyboard.imageset/MPDismissKeyboard@2x.png",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPLogo.imageset/MPLogo.png",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPLogo.imageset/MPLogo@2x.png",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/MPCloseBtn.png",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/MPCloseBtn@2x.png",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/MPNotification.storyboard",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/MPSurvey.storyboard",
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Countly.momd",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPArrowLeft.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPArrowLeft@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPArrowRight.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPArrowRight@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCheckmark.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCheckmark@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseBtn.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseBtn@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPDismissKeyboard.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPDismissKeyboard@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPLogo.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPLogo@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPNotification.storyboardc",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPSurvey.storyboardc",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-AnalyticsTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		380BF1B2A860431EA9D5604F /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Analytics/Pods-Analytics-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		531D6AA25D31422B9D1EC3B5 /* Upload Bugsnag dSYM */ = {
@@ -715,21 +737,6 @@
 			shellScript = "\nif ENV[\"DEBUG_INFORMATION_FORMAT\"] != \"dwarf-with-dsym\" or ENV[\"PLATFORM_NAME\"] == \"iphonesimulator\"\n  exit\nend\n\nfork do\n  Process.setsid\n  STDIN.reopen(\"/dev/null\")\n  STDOUT.reopen(\"/dev/null\", \"a\")\n  STDERR.reopen(\"/dev/null\", \"a\")\n\n  require 'shellwords'\n\n  Dir[\"#{ENV[\"DWARF_DSYM_FOLDER_PATH\"]}/#{ENV[\"DWARF_DSYM_FILE_NAME\"]}/Contents/Resources/DWARF/*\"].each do |dsym|\n    system(\"curl -F dsym=@#{Shellwords.escape(dsym)} -F projectRoot=#{Shellwords.escape(ENV[\"PROJECT_DIR\"])} https://upload.bugsnag.com/\")\n  end\nend\n";
 			showEnvVarsInLog = 0;
 		};
-		6CD29E69AA864B8BB2C719DF /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		7739C0ADA9C84AB390D7F617 /* Upload Bugsnag dSYM */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -745,19 +752,22 @@
 			shellScript = "\nif ENV[\"DEBUG_INFORMATION_FORMAT\"] != \"dwarf-with-dsym\" or ENV[\"PLATFORM_NAME\"] == \"iphonesimulator\"\n  exit\nend\n\nfork do\n  Process.setsid\n  STDIN.reopen(\"/dev/null\")\n  STDOUT.reopen(\"/dev/null\", \"a\")\n  STDERR.reopen(\"/dev/null\", \"a\")\n\n  require 'shellwords'\n\n  Dir[\"#{ENV[\"DWARF_DSYM_FOLDER_PATH\"]}/#{ENV[\"DWARF_DSYM_FILE_NAME\"]}/Contents/Resources/DWARF/*\"].each do |dsym|\n    system(\"curl -F dsym=@#{Shellwords.escape(dsym)} -F projectRoot=#{Shellwords.escape(ENV[\"PROJECT_DIR\"])} https://upload.bugsnag.com/\")\n  end\nend\n";
 			showEnvVarsInLog = 0;
 		};
-		BB672FCD0430415AB87EF64C /* Copy Pods Resources */ = {
+		C86018483751B7F96C858388 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Analytics-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D3C07FDE185A892F00649011 /* Run Script */ = {
@@ -772,7 +782,55 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cp -r ${SYMROOT}/Release/Analytics.framework ${SRCROOT}/Examples/DirectIncludeExample/Analytics.framework";
+			shellScript = "cp -r ${SYMROOT}/Release/Analytics.framework ${SRCROOT}/Examples/DirectIncludeExample/Analytics.framework\n";
+		};
+		DB6F1DF6B8FCE0ACBB30BA66 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AnalyticsTests/Pods-AnalyticsTests-resources.sh",
+				"${PODS_ROOT}/Countly/Countly.xcdatamodeld",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPArrowLeft.imageset/MPArrowLeft.png",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPArrowLeft.imageset/MPArrowLeft@2x.png",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPArrowRight.imageset/MPArrowRight.png",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPArrowRight.imageset/MPArrowRight@2x.png",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPCheckmark.imageset/MPCheckmark.png",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPCheckmark.imageset/MPCheckmark@2x.png",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPCloseBtn.imageset/MPCloseBtn.png",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPCloseBtn.imageset/MPCloseBtn@2x.png",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPDismissKeyboard.imageset/MPDismissKeyboard.png",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPDismissKeyboard.imageset/MPDismissKeyboard@2x.png",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPLogo.imageset/MPLogo.png",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPLogo.imageset/MPLogo@2x.png",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/MPCloseBtn.png",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/MPCloseBtn@2x.png",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/MPNotification.storyboard",
+				"${PODS_ROOT}/Mixpanel/Mixpanel/MPSurvey.storyboard",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Countly.momd",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPArrowLeft.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPArrowLeft@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPArrowRight.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPArrowRight@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCheckmark.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCheckmark@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseBtn.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseBtn@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPDismissKeyboard.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPDismissKeyboard@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPLogo.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPLogo@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPNotification.storyboardc",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPSurvey.storyboardc",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnalyticsTests/Pods-AnalyticsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		EA25892217C693DD000CEF61 /* Build Framework */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -787,7 +845,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nPRODUCT_PATH=\"${SYMROOT}/Release/Analytics.framework\"\n\n## Prepare the framework Folder Structure\nmkdir -p \"${PRODUCT_PATH}/Versions/A/Headers\"\n# Link the \"Current\" version to \"A\"\n/bin/ln -sfh A \"${PRODUCT_PATH}/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${PRODUCT_PATH}/Headers\"\n/bin/ln -sfh Versions/Current/Analytics \"${PRODUCT_PATH}/Analytics\"\n\n## Compile for both iPhone (armv7, armv7s, arm64) and iPhone Simulator (i386)\nxcodebuild -workspace Analytics.xcworkspace -scheme Analytics -configuration Release -sdk iphonesimulator\nxcodebuild -workspace Analytics.xcworkspace -scheme Analytics -configuration Release -sdk iphoneos\n\n## Combine the two separate libAnalytics.a into a single fat binary containing all 3 architectures\nlipo -output \"${SYMROOT}/Release/libAnalytics.a\" -create \\\n    \"${SYMROOT}/Release-iphoneos/libAnalytics.a\" \\\n    \"${SYMROOT}/Release-iphonesimulator/libAnalytics.a\"\n\n## Strip out Pods-dummy objects to prevent duplicate symbol when used by CocoaPods\nfor ARCH in i386 armv7 armv7s arm64\ndo\n    lipo \"${SYMROOT}/Release/libAnalytics.a\" -thin $ARCH -output \"${SYMROOT}/Release/libAnalytics-${ARCH}-clean.a\"\n    DUMMY_OBJECTS=`ar -t ${SYMROOT}/Release/libAnalytics-${ARCH}-clean.a | grep ^Pods.*-dummy.o$ | tr '\\n' ' '`\n    if [ \"$DUMMY_OBJECTS\" != \"\" ]\n    then\n        ar -sd \"${SYMROOT}/Release/libAnalytics-${ARCH}-clean.a\" $DUMMY_OBJECTS\n    fi\ndone\n\n## Create a fat lib from the now cleaned up thin libs and place inside framework\nlipo -output \"${PRODUCT_PATH}/Versions/A/Analytics\" -create \\\n    \"${SYMROOT}/Release/libAnalytics-i386-clean.a\" \\\n    \"${SYMROOT}/Release/libAnalytics-armv7-clean.a\" \\\n    \"${SYMROOT}/Release/libAnalytics-armv7s-clean.a\" \\\n    \"${SYMROOT}/Release/libAnalytics-arm64-clean.a\"\n\n## Copy headers into the framework\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\n/bin/cp -a \"${SYMROOT}/Release-iphoneos/AnalyticsHeaders/\" \"${PRODUCT_PATH}/Versions/A/Headers/\"\n\n# Zip up the framework and license for distribution, and open products folder\ncd \"${SYMROOT}/Release\"\ncp \"${PROJECT_DIR}/License.md\" .\nzip --symlinks -r Analytics-${ANALYTICS_VERSION}.zip Analytics.framework License.md\nopen .\n";
+			shellScript = "set -e\n\nPRODUCT_PATH=\"${SYMROOT}/Release/Analytics.framework\"\n\n## Prepare the framework Folder Structure\nmkdir -p \"${PRODUCT_PATH}/Versions/A/Headers\"\n# Link the \"Current\" version to \"A\"\n/bin/ln -sfh A \"${PRODUCT_PATH}/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${PRODUCT_PATH}/Headers\"\n/bin/ln -sfh Versions/Current/Analytics \"${PRODUCT_PATH}/Analytics\"\n\n## Compile for both iPhone (armv7, armv7s, arm64) and iPhone Simulator (i386)\nxcodebuild -workspace Analytics.xcworkspace -scheme Analytics -configuration Release -sdk iphonesimulator\nxcodebuild -workspace Analytics.xcworkspace -scheme Analytics -configuration Release -sdk iphoneos\n\n## Combine the two separate libAnalytics.a into a single fat binary containing all 3 architectures\nlipo -output \"${SYMROOT}/Release/libAnalytics.a\" -create \\\n    \"${SYMROOT}/Release-iphoneos/libAnalytics.a\" \\\n    \"${SYMROOT}/Release-iphonesimulator/libAnalytics.a\"\n\n## Strip out Pods-dummy objects to prevent duplicate symbol when used by CocoaPods\nfor ARCH in armv7 arm64\ndo\n    lipo \"${SYMROOT}/Release/libAnalytics.a\" -thin $ARCH -output \"${SYMROOT}/Release/libAnalytics-${ARCH}-clean.a\"\n    DUMMY_OBJECTS=`ar -t ${SYMROOT}/Release/libAnalytics-${ARCH}-clean.a | grep ^Pods.*-dummy.o$ | tr '\\n' ' '`\n    if [ \"$DUMMY_OBJECTS\" != \"\" ]\n    then\n        ar -sd \"${SYMROOT}/Release/libAnalytics-${ARCH}-clean.a\" $DUMMY_OBJECTS\n    fi\ndone\n\n## Create a fat lib from the now cleaned up thin libs and place inside framework\nlipo -output \"${PRODUCT_PATH}/Versions/A/Analytics\" -create \\\n    \"${SYMROOT}/Release/libAnalytics-armv7-clean.a\" \\\n    \"${SYMROOT}/Release/libAnalytics-arm64-clean.a\"\n\n## Copy headers into the framework\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\n/bin/cp -a \"${SYMROOT}/Release-iphoneos/AnalyticsHeaders/\" \"${PRODUCT_PATH}/Versions/A/Headers/\"\n\n# Zip up the framework and license for distribution, and open products folder\ncd \"${SYMROOT}/Release\"\ncp \"${PROJECT_DIR}/License.md\" .\nzip --symlinks -r Analytics-${ANALYTICS_VERSION}.zip Analytics.framework License.md\nopen .\n";
 		};
 		EA722AEF17C87BB00016E8B0 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -815,6 +873,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Update the version in Analytics.h header\noldVersion=\"\\/\\/ Version .*\"\nnewVersion=\"\\/\\/ Version ${ANALYTICS_VERSION} (Do not change this line. It is automatically modified by the build process)\"\nsed -i '' -e \"s/${oldVersion}/${newVersion}/g\" Analytics/Analytics.h\n\n# Update the version in Analytics.podspec\noldVersion=\"s.version         = .*\"\nnewVersion=\"s.version         = \\\"${ANALYTICS_VERSION}\\\"\"\nsed -i '' -e \"s/${oldVersion}/${newVersion}/g\" Analytics.podspec\n";
+		};
+		F2BE04C6F0328ACA0A8FCF23 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnalyticsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -884,7 +960,7 @@
 		};
 		EA722B0117C87BB00016E8B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1292362745B3499F9F8849DB /* Pods-AnalyticsTests.xcconfig */;
+			baseConfigurationReference = B832851B56C17193D6A65FB2 /* Pods-AnalyticsTests.debug.xcconfig */;
 			buildSettings = {
 				ANALYTICS_VERSION = 0.7.5;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -902,7 +978,7 @@
 		};
 		EA722B0217C87BB00016E8B0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1292362745B3499F9F8849DB /* Pods-AnalyticsTests.xcconfig */;
+			baseConfigurationReference = BD9995F7C6075DBB36BFD1DB /* Pods-AnalyticsTests.release.xcconfig */;
 			buildSettings = {
 				ANALYTICS_VERSION = 0.7.5;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -977,7 +1053,7 @@
 		};
 		F7200B8217659B2F003F3138 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D0FCA5DB8CF4351BA2EC04C /* Pods.xcconfig */;
+			baseConfigurationReference = 2BAC5E0FBC04D7631D938E45 /* Pods-Analytics.debug.xcconfig */;
 			buildSettings = {
 				ANALYTICS_VERSION = 0.9.8.2;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
@@ -985,14 +1061,24 @@
 				DSTROOT = /tmp/Analytics.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Analytics/Analytics-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/include/libz",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Amplitude-iOS\"",
+					"\"${PODS_ROOT}/Headers/Public/Bugsnag\"",
+					"\"${PODS_ROOT}/Headers/Public/Countly\"",
+					"\"${PODS_ROOT}/Headers/Public/CrittercismSDK\"",
+					"\"${PODS_ROOT}/Headers/Public/FlurrySDK\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleAnalytics-iOS-SDK\"",
+					"\"${PODS_ROOT}/Headers/Public/Kiwi\"",
+					"\"${PODS_ROOT}/Headers/Public/Localytics-iOS-Client\"",
+					"\"${PODS_ROOT}/Headers/Public/Mixpanel\"",
+					"\"${PODS_ROOT}/Headers/Public/Tapstream\"",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/reinpk/dev/segmentio-project/analytics-ios",
-					"/Users/reinpk/dev/segmentio-project/analytics-ios/Pods/FlurrySDK/Flurry",
-					"/Users/reinpk/dev/segmentio-project/analytics-ios/Pods/Omniture",
-					"/Users/reinpk/dev/segmentio-project/analytics-ios/Pods/CrittercismSDK/CrittercismSDK",
-					"/Users/reinpk/dev/segmentio/analytics-ios/Pods/CrittercismSDK/CrittercismSDK",
-					"/Users/reinpk/dev/segmentio/analytics-ios/Pods/FlurrySDK/Flurry",
 					"/Developer/analytics-ios/Pods/FlurrySDK/Flurry",
 				);
 				ONLY_ACTIVE_ARCH = YES;
@@ -1007,7 +1093,7 @@
 		};
 		F7200B8317659B2F003F3138 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D0FCA5DB8CF4351BA2EC04C /* Pods.xcconfig */;
+			baseConfigurationReference = 630CD16DA592C55B88D0EB19 /* Pods-Analytics.release.xcconfig */;
 			buildSettings = {
 				ANALYTICS_VERSION = 0.9.8.2;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
@@ -1016,14 +1102,24 @@
 				DSTROOT = /tmp/Analytics.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Analytics/Analytics-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/include/libz",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Amplitude-iOS\"",
+					"\"${PODS_ROOT}/Headers/Public/Bugsnag\"",
+					"\"${PODS_ROOT}/Headers/Public/Countly\"",
+					"\"${PODS_ROOT}/Headers/Public/CrittercismSDK\"",
+					"\"${PODS_ROOT}/Headers/Public/FlurrySDK\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleAnalytics-iOS-SDK\"",
+					"\"${PODS_ROOT}/Headers/Public/Kiwi\"",
+					"\"${PODS_ROOT}/Headers/Public/Localytics-iOS-Client\"",
+					"\"${PODS_ROOT}/Headers/Public/Mixpanel\"",
+					"\"${PODS_ROOT}/Headers/Public/Tapstream\"",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/reinpk/dev/segmentio-project/analytics-ios",
-					"/Users/reinpk/dev/segmentio-project/analytics-ios/Pods/FlurrySDK/Flurry",
-					"/Users/reinpk/dev/segmentio-project/analytics-ios/Pods/Omniture",
-					"/Users/reinpk/dev/segmentio-project/analytics-ios/Pods/CrittercismSDK/CrittercismSDK",
-					"/Users/reinpk/dev/segmentio/analytics-ios/Pods/CrittercismSDK/CrittercismSDK",
-					"/Users/reinpk/dev/segmentio/analytics-ios/Pods/FlurrySDK/Flurry",
 					"/Developer/analytics-ios/Pods/FlurrySDK/Flurry",
 				);
 				OTHER_LDFLAGS = "-ObjC";

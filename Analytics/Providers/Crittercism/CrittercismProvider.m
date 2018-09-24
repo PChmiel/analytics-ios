@@ -2,7 +2,7 @@
 // Copyright 2013 Segment.io
 
 #import "CrittercismProvider.h"
-#import "Crittercism.h"
+#import <Crittercism/Crittercism.h>
 #import "AnalyticsUtils.h"
 #import "Analytics.h"
 

@@ -1,7 +1,7 @@
 // AmplitudeProvider.m
 // Copyright 2013 Segment.io
 
-#import <Amplitude-iOS/Amplitude.h>
+#import "Amplitude.h"
 #import "AmplitudeProvider.h"
 #import "AnalyticsUtils.h"
 #import "Analytics.h"
@@ -46,12 +46,13 @@
 - (void)identify:(NSString *)userId traits:(NSDictionary *)traits options:(NSDictionary *)options
 {
     [Amplitude setUserId:userId];
-    [Amplitude setGlobalUserProperties:traits];
+    [Amplitude setUserProperties:traits];
 }
 
 - (void)track:(NSString *)event properties:(NSDictionary *)properties options:(NSDictionary *)options
 {
-    [Amplitude logEvent:event withCustomProperties:properties];
+    [Amplitude logEvent:event withEventProperties:properties];
+//    [Amplitude logEvent:event withCustomProperties:properties];
 
     // Track any revenue.
     NSNumber *revenue = [AnalyticsProvider extractRevenue:properties];
