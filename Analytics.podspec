@@ -5,8 +5,7 @@ Pod::Spec.new do |s|
     s.homepage        = "https://github.com/SambaTVMobile/analytics-ios"
     s.license         = { :type => "MIT", :file => "License.md" }
     s.author          = { "Segment.io" => "friends@segment.io" }
-    s.source          = { :http => "", 
-                        :flatten => true }
+    s.source          = { :http => "https://github.com/PChmiel/analytics-ios/releases/download/0.9.8.3/Analytics.zip", :flatten => true }
     s.platform        = :ios, '6.0'
     s.vendored_frameworks  = 'Analytics.framework'
     s.frameworks      = 'Foundation', 'UIKit', 'CoreData', 'SystemConfiguration',
